@@ -26,7 +26,7 @@ The project provides RESTful APIs for managing restaurant menu items, table book
 - User login using token authentication
 - Get logged-in user details
 - Token based API authorization
-- Logout API
+- Logout API authorization
 
 ### Menu Management
 - View all menu items
