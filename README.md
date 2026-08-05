@@ -108,6 +108,7 @@ http://127.0.0.1:8000/
 |---|---|---|
 | POST | /auth/token/login/ | Login and generate token |
 | GET | /auth/users/me/ | Current user details |
+| POST | /restaurant/logout/ | Logout and invalidate authentication token |
 
 ### Menu APIs
 
@@ -131,6 +132,22 @@ http://127.0.0.1:8000/
 | PATCH | /restaurant/booking/id/ | Partial update booking|
 | DELETE | /restaurant/booking/id/ | Delete booking |
 
+## Authentication
+
+### Authentication Flow
+
+1. Register a new user.
+2. Login using `/auth/token/login/`.
+3. Copy the authentication token.
+4. Use the token in the `Authorization` header.
+5. Access protected endpoints.
+6. Logout using `/restaurant/logout/`.
+7. After logout, the token becomes invalid and protected APIs return `401 Unauthorized`.
+
+### Authorization Header
+
+```http
+Authorization: Token <your_token>
 ---
 
 ## Authentication Header
