@@ -60,70 +60,102 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+```
+## Installation Steps
 
-##Installation Steps
-1. Clone Repository
+### 1. Clone Repository
+```bash
 git clone <repository-url>
-2. Create Virtual Environment
+```
+### 2. Create Virtual Environment
+```bash
 python -m venv venv
-3. Activate Virtual Environment
+```
+### 3. Activate Virtual Environment
 
 Windows:
-
+```bash
 venv\Scripts\activate
-4. Install Dependencies
+```
+### 4. Install Dependencies
+```bash
 pip install -r requirements.txt
-5. Run Database Migration
+```
+### 5. Run Database Migration
+```bash
 python manage.py migrate
-6. Create Superuser
+```
+### 6. Create Superuser
+```bash
 python manage.py createsuperuser
-7. Start Development Server
+```
+### 7. Start Development Server
+```bash
 python manage.py runserver
+```
 ## Base URL
-Local Development:
-http://127.0.0.1:8000/
 
-##API Endpoints
-##Authentication
-Method	Endpoint	Description
-POST	/auth/token/login/	Login and generate token
-GET	/auth/users/me/	Current user details
-Menu APIs
-Method	Endpoint	Description
-GET	/restaurant/menu/	List menu items
-GET	/restaurant/menu/<id>/	Single menu item
-POST	/restaurant/menu/	Create menu
-PUT	/restaurant/menu/<id>/	Update menu
-PATCH	/restaurant/menu/<id>/	Partial update
-DELETE	/restaurant/menu/<id>/	Delete menu
-Booking APIs
-Method	Endpoint	Description
-GET	/restaurant/booking/	List bookings
-GET	/restaurant/booking/<id>/	Single booking
-POST	/restaurant/booking/	Create booking
-PUT	/restaurant/booking/<id>/	Update booking
-PATCH	/restaurant/booking/<id>/	Partial update
-DELETE	/restaurant/booking/<id>/	Delete booking
-Authentication Header
+Local Development:
+```text
+http://127.0.0.1:8000/
+```
+## API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | /auth/token/login/ | Login and generate token |
+| GET | /auth/users/me/ | Current user details |
+
+### Menu APIs
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | /restaurant/menu/ | List menu items |
+| GET | /restaurant/menu/<id>/ | Single menu item |
+| POST | /restaurant/menu/ | Create menu |
+| PUT | /restaurant/menu/<id>/ | Update menu |
+| PATCH | /restaurant/menu/<id>/ | Partial update menu item |
+| DELETE | /restaurant/menu/<id>/ | Delete menu |
+
+### Booking APIs
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | /restaurant/booking/ | List bookings |
+| GET | /restaurant/booking/<id>/ | Single booking |
+| POST | /restaurant/booking/ | Create booking |
+| PUT | /restaurant/booking/<id>/ | Update booking |
+| PATCH | /restaurant/booking/<id>/ | Partial update booking|
+| DELETE | /restaurant/booking/<id>/ | Delete booking |
+
+---
+
+## Authentication Header
 
 Protected APIs require token authentication.
 
 Example:
-
+```http
 Authorization: Token your_token_here
-API Testing
+```
+## API Testing
 
 The APIs were tested using:
 
-Postman
-Insomnia
+-Postman
+-Insomnia
 
 Tested operations:
 
-Authentication
-Menu CRUD operations
-Booking CRUD operations
-Project Structure
+- Authentication
+- Menu CRUD operations
+- Booking CRUD operations
+
+## Project Structure
+
+```text
 Little Lemon Backend Project
 
 ├── littlelemon
@@ -139,6 +171,7 @@ Little Lemon Backend Project
 ├── manage.py
 ├── requirements.txt
 └── README.md
-Author
+```
+## Author
 
 Ranvir Kumar
