@@ -106,9 +106,9 @@ http://127.0.0.1:8000/
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | /auth/token/login/ | Login and generate token |
-| GET | /auth/users/me/ | Current user details |
-| POST | /restaurant/logout/ | Logout and invalidate authentication token |
+| POST | `/auth/token/login/` | Login and generate token |
+| GET | /auth/users/me/` | Current user details |
+| POST | /`restaurant/logout/` | Logout and invalidate authentication token |
 
 ### Menu APIs
 
@@ -179,6 +179,7 @@ Little Lemon Backend Project
 ├── littlelemon
 │   ├── settings.py
 │   ├── urls.py
+
 │
 ├── restaurant
 │   ├── models.py
