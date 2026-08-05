@@ -60,3 +60,81 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+Installation Steps
+1. Clone Repository
+git clone <repository-url>
+2. Create Virtual Environment
+python -m venv venv
+3. Activate Virtual Environment
+
+Windows:
+
+venv\Scripts\activate
+4. Install Dependencies
+pip install -r requirements.txt
+5. Run Database Migration
+python manage.py migrate
+6. Create Superuser
+python manage.py createsuperuser
+7. Start Development Server
+python manage.py runserver
+API Endpoints
+Authentication
+Method	Endpoint	Description
+POST	/auth/token/login/	Login and generate token
+GET	/auth/users/me/	Current user details
+Menu APIs
+Method	Endpoint	Description
+GET	/restaurant/menu/	List menu items
+GET	/restaurant/menu/id/	Single menu item
+POST	/restaurant/menu/	Create menu
+PUT	/restaurant/menu/id/	Update menu
+PATCH	/restaurant/menu/id/	Partial update
+DELETE	/restaurant/menu/id/	Delete menu
+Booking APIs
+Method	Endpoint	Description
+GET	/restaurant/booking/	List bookings
+GET	/restaurant/booking/id/	Single booking
+POST	/restaurant/booking/	Create booking
+PUT	/restaurant/booking/id/	Update booking
+PATCH	/restaurant/booking/id/	Partial update
+DELETE	/restaurant/booking/id/	Delete booking
+Authentication Header
+
+Protected APIs require token authentication.
+
+Example:
+
+Authorization: Token your_token_here
+API Testing
+
+The APIs were tested using:
+
+Postman
+Insomnia
+
+Tested operations:
+
+Authentication
+Menu CRUD operations
+Booking CRUD operations
+Project Structure
+Little Lemon Backend Project
+
+├── littlelemon
+│   ├── settings.py
+│   ├── urls.py
+│
+├── restaurant
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│
+├── manage.py
+├── requirements.txt
+└── README.md
+Author
+
+Ranvir Kumar
