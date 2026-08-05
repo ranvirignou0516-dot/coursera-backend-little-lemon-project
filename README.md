@@ -61,7 +61,7 @@ DATABASES = {
     }
 }
 
-Installation Steps
+##Installation Steps
 1. Clone Repository
 git clone <repository-url>
 2. Create Virtual Environment
@@ -79,8 +79,12 @@ python manage.py migrate
 python manage.py createsuperuser
 7. Start Development Server
 python manage.py runserver
-API Endpoints
-Authentication
+## Base URL
+Local Development:
+http://127.0.0.1:8000/
+
+##API Endpoints
+##Authentication
 Method	Endpoint	Description
 POST	/auth/token/login/	Login and generate token
 GET	/auth/users/me/	Current user details
