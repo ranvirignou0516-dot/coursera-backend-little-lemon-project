@@ -113,22 +113,22 @@ http://127.0.0.1:8000/
 | Method | Endpoint | Description |
 |---|---|---|
 | GET | /restaurant/menu/ | List menu items |
-| GET | /restaurant/menu/<id>/ | Single menu item |
+| GET | /restaurant/menu/id/ | Single menu item |
 | POST | /restaurant/menu/ | Create menu |
-| PUT | /restaurant/menu/<id>/ | Update menu |
-| PATCH | /restaurant/menu/<id>/ | Partial update menu item |
-| DELETE | /restaurant/menu/<id>/ | Delete menu |
+| PUT | /restaurant/menu/id/ | Update menu |
+| PATCH | /restaurant/menu/id/ | Partial update menu item |
+| DELETE | /restaurant/menu/id/ | Delete menu |
 
 ### Booking APIs
 
 | Method | Endpoint | Description |
 |---|---|---|
 | GET | /restaurant/booking/ | List bookings |
-| GET | /restaurant/booking/<id>/ | Single booking |
+| GET | /restaurant/booking/id/ | Single booking |
 | POST | /restaurant/booking/ | Create booking |
-| PUT | /restaurant/booking/<id>/ | Update booking |
-| PATCH | /restaurant/booking/<id>/ | Partial update booking|
-| DELETE | /restaurant/booking/<id>/ | Delete booking |
+| PUT | /restaurant/booking/id/ | Update booking |
+| PATCH | /restaurant/booking/id/ | Partial update booking|
+| DELETE | /restaurant/booking/id/ | Delete booking |
 
 ---
 
